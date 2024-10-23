@@ -9,7 +9,8 @@ body, html {
 
 /* Navbar Styles */
 .navbar {
-    background-color: transparent;
+    /* background-color: transparent; */
+    background-color: #06002e;
     transition: background-color 0.3s ease;
 }
 
@@ -28,6 +29,15 @@ body, html {
 
 .navbar .nav-link, .navbar .navbar-brand {
     color: white !important;
+}
+
+/* Dropdown on hover */
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    margin-top: 0;
 }
 
 /* Hero Section */
@@ -55,7 +65,7 @@ body, html {
     z-index: 10; /* Ensure content is on top of particles */
 }
 
-/* Ensure other sections are not affected */
+/* Other Section styles */
 section {
     padding: 60px 0;
     min-height: 100vh;
@@ -80,5 +90,3 @@ section {
 html {
     scroll-behavior: smooth;
 }
-
-
