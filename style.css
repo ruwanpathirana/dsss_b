@@ -1,0 +1,84 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: #003366; /* Dark blue */
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    padding: 8px 15px;
+}
+
+.navbar .nav-link, .navbar .navbar-brand {
+    color: white !important;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('/img/background.svg') no-repeat center center/cover;
+    min-height: 100vh; /* Ensures it fits full screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    overflow: hidden; /* Keeps particles within the hero section */
+}
+
+#tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Lower than content */
+}
+
+.hero .container {
+    z-index: 10; /* Ensure content is on top of particles */
+}
+
+/* Ensure other sections are not affected */
+section {
+    padding: 60px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* Make sure sections don't overlap each other */
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #212529;
+    color: #fff;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+
