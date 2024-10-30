@@ -69,6 +69,7 @@ body, html {
 }
 
 .row {
+    margin-left: 100px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -430,26 +431,31 @@ html {
 /* CONTACT */
 
 #contact {
-    background-color: #f8f9fa;
-    padding: 60px 0;
+    background-color: #f0f4f8; /* Softer background for a cleaner look */
+    padding: 80px 0; /* Increased padding for more whitespace */
     text-align: center;
 }
 
 #contact h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 2.5rem; /* Larger font size */
+    margin-bottom: 30px; /* More space below heading */
+    color: #002244; /* Darker color for emphasis */
+    font-weight: 700;
 }
 
 #contactForm {
-    max-width: 600px;
+    max-width: 700px; /* Larger form width */
     margin: auto;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for elegance */
+    border-radius: 10px;
 }
 
 .form-group {
     display: flex;
     gap: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .input-field {
@@ -460,51 +466,60 @@ html {
 .input-field input,
 .input-field textarea {
     width: 100%;
-    padding: 12px 12px 12px 40px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
+    padding: 15px 15px 15px 50px; /* More padding for spacious look */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .input-field input:focus,
 .input-field textarea:focus {
-    border-color: #007bff;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
     outline: none;
 }
 
 .input-field i {
     position: absolute;
-    left: 10px;
+    left: 15px; /* More space for icon */
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.2rem;
-    color: #003366;
+    font-size: 1.3rem;
+    color: #0056b3;
 }
 
 textarea {
     resize: none;
-    height: 100px;
+    height: 120px; /* Increased height for the textarea */
 }
 
 .full-width {
     width: 100%;
+    margin-top: 15px;
 }
 
 .c_btn {
-    background-color: #003366;
+    background-color: #0056b3;
     color: #fff;
-    padding: 12px 20px;
+    padding: 15px 30px;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .c_btn:hover {
-    background-color: #0056b3;
+    background-color: #003366;
+    transform: translateY(-2px); /* Slight lift on hover */
 }
+
+.c_btn:active {
+    transform: translateY(1px); /* Press effect */
+}
+
 
 
 /* Media Queries for Mobile */
