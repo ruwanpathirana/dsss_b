@@ -68,7 +68,7 @@ body, html {
     margin: 0;
 }
 
-.row {
+.row_drop {
     margin-left: 100px;
     display: flex;
     flex-wrap: wrap;
@@ -519,6 +519,65 @@ textarea {
 .c_btn:active {
     transform: translateY(1px); /* Press effect */
 }
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #0a0e1a;
+    color: #d3d4d8;
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer .list-unstyled li {
+    margin-bottom: 10px;
+}
+
+.footer .list-unstyled a {
+    color: #d3d4d8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer .list-unstyled a:hover {
+    color: #0099ff;
+}
+
+.footer .social-icons a {
+    color: #eaf2f7;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+    color: #d3d4d8;
+}
+
+.footer .map iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.footer .map {
+    margin-top: 15px;
+}
+
+.footer hr {
+    border-top: 1px solid #444;
+    margin: 30px 0;
+}
+
+.footer .text-center {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
 
 
 
