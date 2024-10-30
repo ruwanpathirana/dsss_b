@@ -14,13 +14,11 @@ body, html {
 }
 
 .navbar.scrolled {
-    background-color: #003366; 
+    background-color: #003366; /* Dark blue */
 }
 
-/* Navbar item spacing */
 .navbar-nav .nav-item {
     margin-left: 20px;
-    margin-bottom: 0;
 }
 
 .navbar-nav .nav-link {
@@ -28,30 +26,23 @@ body, html {
     padding: 8px 15px;
 }
 
-.navbar .nav-link,
-.navbar .navbar-brand {
+.navbar .nav-link, .navbar .navbar-brand {
     color: white !important;
 }
 
-/* Dropdown hover persistence */
-.nav-item.dropdown:hover .dropdown-menu,
-.nav-item.dropdown .dropdown-menu:hover {
+/* Dropdown hover behavior */
+.nav-item.dropdown:hover .dropdown-menu {
     display: block;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Full-width dropdown positioning */
-.navbar .dropdown {
-    position: static;
-}
-
+/* Dropdown menu styles */
 .navbar .dropdown-menu {
     position: absolute;
-    top: 100%; /* Adjusted to avoid gaps */
+    top: 100%;
     left: 0;
-    width: 100vw; /* Full viewport width */
+    width: 100vw;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 0;
@@ -60,38 +51,26 @@ body, html {
     z-index: 1000;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    margin: 0;
 }
 
-/* Full-width mega-dropdown structure */
-.mega-dropdown .container-fluid,
 .mega-dropdown .container {
-    width: 100%;
     max-width: 100%;
-    padding: 0;
-    margin: 0;
 }
 
-/* Hover effect for dropdown menu */
 .navbar .dropdown:hover .dropdown-menu {
     display: block;
     opacity: 1;
     visibility: visible;
 }
 
-/* Flex styling for rows and columns */
 .row {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    width: 100%;
-    margin: 0;
+    flex-wrap: wrap;
 }
 
-.col {
-    flex: 1;
-    padding: 10px 20px;
-    text-align: left;
+/* Styling each column */
+.col-md-3 {
+    padding: 10px;
 }
 
 /* Header styling for each section */
@@ -104,7 +83,6 @@ body, html {
     border-bottom: 2px solid #003366;
     padding-bottom: 5px;
 }
-
 /* Icon and link styling */
 .dropdown-item {
     padding: 8px 0;
@@ -115,17 +93,27 @@ body, html {
     transition: background-color 0.2s ease;
 }
 
-/* Icon spacing */
+/* Spacing for icons */
 .dropdown-item i {
-    margin-right: 10px;
+    margin-right: 8px;
     color: #003366;
 }
 
-/* Hover effect for dropdown items */
+/* Hover effect for items */
 .dropdown-item:hover {
     background-color: #f0f8ff;
     color: #003366;
 }
+
+/* Adjusting the mega-dropdown container */
+.mega-dropdown .container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.navbar .dropdown {
+    position: static;
+}
+
 /* Hero Section */
 .hero {
     position: relative;
