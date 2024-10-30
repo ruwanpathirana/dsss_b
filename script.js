@@ -12,67 +12,66 @@ document.addEventListener('DOMContentLoaded', function () {
     tsParticles.load('tshexagon', {
         particles: {
             number: {
-                value: 80,  // Number of particles (lines and nodes)
+                value: 80,
                 density: {
                     enable: true,
                     value_area: 1000
                 }
             },
             shape: {
-                type: "circle",  // Particles are circular nodes
+                type: "circle"
             },
             color: {
-                value: "#ffffff"  // Set node color (white)
+                value: "#ffffff"
             },
             opacity: {
-                value: 0.3,  // Slightly transparent nodes
+                value: 0.3,
                 random: false
             },
             size: {
-                value: 5,  // Size of nodes
+                value: 5,
                 random: true
             },
             line_linked: {
-                enable: true,  // Enable the lines between particles
-                distance: 150,  // Max distance between linked nodes
-                color: "#ffffff",  // Line color (white)
-                opacity: 0.4,  // Line opacity
-                width: 1.5  // Line thickness
+                enable: true,
+                distance: 150,
+                color: "#ffffff",
+                opacity: 0.4,
+                width: 1.5
             },
             move: {
                 enable: true,
-                speed: 1,  // Movement speed
+                speed: 1,
                 direction: "none",
-                out_mode: "bounce",  // Nodes will bounce when reaching edge
+                out_mode: "bounce"
             }
         },
         interactivity: {
             events: {
                 onhover: {
                     enable: true,
-                    mode: "grab"  // Lines get pulled towards cursor
+                    mode: "grab"
                 },
                 onclick: {
                     enable: true,
-                    mode: "push"  // Click to add more particles
+                    mode: "push"
                 }
             },
             modes: {
                 grab: {
-                    distance: 200,  // Distance for "grab" effect
+                    distance: 200,
                     line_linked: {
-                        opacity: 1  // Line opacity when "grabbed"
+                        opacity: 1
                     }
                 },
                 push: {
-                    particles_nb: 4  // Number of particles added on click
+                    particles_nb: 4
                 }
             }
         },
-        detectRetina: true  // For high-DPI screens
+        detectRetina: true
     });
 });
-
 // SLIDE
 
 $(document).ready(function () {
