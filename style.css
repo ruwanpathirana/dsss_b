@@ -450,3 +450,50 @@ textarea {
 .c_btn:hover {
     background-color: #0056b3;
 }
+
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        margin-left: 10px; /* Reduce margin on mobile */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem; /* Smaller font size for links */
+    }
+
+    .service-buttons .btn {
+        font-size: 1rem; /* Adjust button font size */
+    }
+
+    .card {
+        width: 90%; /* Responsive card width */
+        height: auto; /* Allow card height to adjust */
+    }
+
+    #expertise h2 {
+        font-size: 2rem; /* Smaller heading size */
+    }
+
+    #expertise h3 {
+        font-size: 1.5rem; /* Smaller subheading size */
+    }
+
+    .consultation-btn {
+        width: 100%; /* Full width buttons */
+    }
+
+    .blog-cards-wrapper {
+        width: 100%; /* Full width for blog section */
+    }
+
+    .blog-card {
+        width: 90%; /* Full width for blog cards */
+        margin: 10px 0; /* Margin between cards */
+    }
+
+    /* Adjust padding in sections */
+    section {
+        padding: 30px 0; /* Reduce padding for mobile */
+    }
+}
