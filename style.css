@@ -235,6 +235,11 @@ html {
     transform: translateY(-5px);
 }
 
+#expertise .expertise-card i {
+    color: #003366;
+    margin-right: 8px; /* Adjust spacing as needed */
+}
+
 .expertise-card h3 {
     font-size: 1.25rem;
     font-weight: bold;
