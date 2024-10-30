@@ -11,6 +11,7 @@ body, html {
 .navbar {
     background-color: #06002e;
     transition: background-color 0.3s ease;
+    padding: 0; /* Remove any extra padding */
 }
 
 .navbar.scrolled {
@@ -22,27 +23,25 @@ body, html {
 }
 
 .navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    height: 100%; /* Full height of navbar */
+    color: white !important;
     font-size: 1.1rem;
     padding: 8px 15px;
 }
 
-.navbar .nav-link, .navbar .navbar-brand {
-    color: white !important;
-}
-
-/* Dropdown hover behavior */
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-    opacity: 1;
-    visibility: visible;
+/* Position the dropdown menu directly below the navbar */
+.nav-item.dropdown {
+    position: relative;
 }
 
 /* Dropdown menu styles */
 .navbar .dropdown-menu {
     position: absolute;
-    top: 100%;
+    top: calc(100% - 2px); /* Move dropdown slightly up to overlap navbar */
     left: 0;
-    width: 100vw;
+    width: 100vw; /* Full viewport width */
     padding: 20px;
     background-color: #ffffff;
     border-radius: 0;
@@ -51,16 +50,22 @@ body, html {
     z-index: 1000;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 0;
 }
 
-.mega-dropdown .container {
-    max-width: 100%;
-}
-
-.navbar .dropdown:hover .dropdown-menu {
+/* Ensure the dropdown stays open when hovered */
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown .dropdown-menu:hover {
     display: block;
     opacity: 1;
     visibility: visible;
+}
+
+.mega-dropdown .container-fluid, .mega-dropdown .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .row {
@@ -83,6 +88,7 @@ body, html {
     border-bottom: 2px solid #003366;
     padding-bottom: 5px;
 }
+
 /* Icon and link styling */
 .dropdown-item {
     padding: 8px 0;
@@ -110,6 +116,7 @@ body, html {
     display: flex;
     flex-wrap: nowrap;
 }
+
 .navbar .dropdown {
     position: static;
 }
