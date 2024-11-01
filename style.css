@@ -582,7 +582,7 @@ textarea {
 
 #chat-icon {
     position: fixed;
-    bottom: 30px;
+    bottom: 40px;
     right: 30px;
     border-radius: 50%;
     cursor: pointer;
@@ -592,14 +592,14 @@ textarea {
     transform: scale(1.1);
   }
   #chat-icon img {
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
   }
   
   /* Chatbot Window */
   #chatbot-window {
     position: fixed;
-    bottom: 105px;
+    bottom: 110px;
     right: 20px;
     width: 350px;
     height: 450px;
@@ -611,7 +611,16 @@ textarea {
     overflow: hidden;
     animation: fadeIn 0.3s ease;
     z-index: 20;
-    
+
+  }
+
+  .coming-soon {
+    text-align: center;
+    font-size: 16px;
+    color: #007bff;
+    font-style: italic;
+    margin-top: 10px;
+    animation: fadeInBlink 1.5s ease-in-out infinite;
   }
   
   @keyframes fadeIn {
