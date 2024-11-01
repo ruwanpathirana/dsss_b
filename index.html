@@ -355,6 +355,24 @@
         </div>
     </section>
 
+    <!-- Chatbot Widget Icon -->
+    <div id="chat-icon" onclick="toggleChat()">
+        <img src="/img/chat.png" alt="Chat" id="chat-icon-image">
+      </div>
+      
+      <!-- Chatbot UI -->
+      <div id="chatbot-window" class="chatbot-hidden">
+        <div id="chat-header">
+          <h2>Chat with Lumi!</h2>
+          <button id="close-chat" onclick="toggleChat()">✖</button>
+        </div>
+        <div id="chat-box"></div>
+        <div id="chat-input">
+          <input type="text" id="user-input" placeholder="Type a message...">
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+
     <!-- Footer -->
     <footer class="footer bg-dark text-white py-5">
         <div class="container">

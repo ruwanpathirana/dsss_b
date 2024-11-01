@@ -145,3 +145,74 @@ function slideRight() {
         cardsContainer.style.transform = `translateX(${currentPosition}px)`;
     }
 }
+
+
+// CHATBOT
+
+// Toggle Chat Window
+function toggleChat() {
+    const chatWindow = document.getElementById('chatbot-window');
+    const chatIconImage = document.getElementById('chat-icon-image');
+    if (chatWindow.style.display === 'none' || chatWindow.style.display === '') {
+      chatWindow.style.display = 'flex';
+      chatIconImage.src = '/img/chatcut.png';  // Change icon image when chat is open
+    } else {
+      chatWindow.style.display = 'none';
+      chatIconImage.src = '/img/chat.png';     // Change back to original icon
+    }
+  }
+  
+  // Send Message to Chatbot
+  function sendMessage() {
+    const inputBox = document.getElementById("user-input");
+    const message = inputBox.value;
+  
+    if (message.trim() === "") {
+      return;
+    }
+  
+    // Add user's message to chat
+    addMessage("You", message);
+  
+    // Send message to the backend
+    fetch("http://localhost:5000/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ user_input: message, chat_history: [] }), // Send the chat history if applicable
+      })
+    .then((response) => response.json())
+    .then((data) => {
+      // Add AI's response to chat
+      addMessage("Bot", data.response);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      addMessage("Bot", "Error: Unable to get response from the server.");
+    });
+  
+    // Clear input box
+    inputBox.value = "";
+  }
+  
+  // Add Message to Chat Box
+  function addMessage(sender, message) {
+    const chatBox = document.getElementById("chat-box");
+  
+    const messageElement = document.createElement("div");
+    messageElement.classList.add("message");
+  
+    if (sender === "You") {
+      messageElement.classList.add("user-message");
+    } else {
+      messageElement.classList.add("ai-message");
+    }
+  
+    messageElement.textContent = message;
+    chatBox.appendChild(messageElement);
+  
+    // Scroll to the bottom
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+  
